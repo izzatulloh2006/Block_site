@@ -4,13 +4,9 @@ import os
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-xrz3+oj3$nik@(u7c!_p+mga8b!mpm1wx=r&s66-x_6+wz=$_c'
 
-# SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
 ALLOWED_HOSTS = ['*']
@@ -30,12 +26,7 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',
     'drf_yasg',
     'django_filters',
-    'mptt',
     'rest_framework_simplejwt',
-    'nested_inline',
-    'django_user_agents',
-    'parler',
-    'django_celery_results',
     "crispy_forms",
     "crispy_bootstrap5",
 ]
@@ -61,7 +52,7 @@ ROOT_URLCONF = 'root.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'templates']
+        'DIRS': [BASE_DIR.joinpath('templates')]
         ,
         'APP_DIRS': True,
         'OPTIONS': {

@@ -4,11 +4,8 @@ from django.http import HttpResponse
 from .forms import ArticleForm
 
 
-# Create your views here.
-
 def index(request):
     return render(request, 'index.html')
-
 
 def home(request):
     articles = Article.objects.filter(is_active=True)
